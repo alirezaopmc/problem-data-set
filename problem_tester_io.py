@@ -27,6 +27,10 @@ def cmp(p1, p2) -> bool:
 
 
 problem_name: str
+
+# If debug is true slo folder will not removed
+debug_mode = input('Debug? [y/n] ') == 'y'
+
 if len(sys.argv) > 1:
 	problem_name = sys.argv[1]
 else:
@@ -66,10 +70,11 @@ for i in range(1, 51):
 		err = True
 		break
 
+if not debug_mode:
+	shutil.rmtree(os.path.join(problem_path, 'slo'))
 
 if err:
 	raise Exception("Failed Wrong at", i)
 else:
 	# Remove Solution Output directory
-	shutil.rmtree(os.path.join(problem_path, 'slo'))
 	print('All OK!')
