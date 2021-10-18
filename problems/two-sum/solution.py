@@ -6,4 +6,4 @@ for i in range(n-1):
         if (a[i] + a[j]) == t:
             print(i+1, j+1)
             exit()
-print(-1)
+print(-1, -1)
