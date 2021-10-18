@@ -1,7 +1,6 @@
-
-
-# Is Prime?
 def isPrime(n):
+    if n == 1: return False
+
     i = 2
 
     while i * i <= n:
@@ -14,6 +13,7 @@ def isPrime(n):
 n = int(input())
 
 ans = [-1, -1]
+
 for i in range(n - 1 + n%2, 2, -2):
     if isPrime(i) and isPrime(i-2):
         ans = [i-2, i]
