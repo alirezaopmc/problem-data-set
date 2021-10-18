@@ -7,4 +7,7 @@ def isPalindrome(s: str):
 
 n = input()
 
-print('YES' if isPalindrome(n) else 'NO')
+if isPalindrome(n):
+    print('YES')
+else:
+    print('NO')
