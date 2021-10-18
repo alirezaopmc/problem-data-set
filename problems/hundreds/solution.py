@@ -1,2 +1,5 @@
-n = input()
-print(n[-3])
+n = int(input())
+
+ans = (n // 100) % 10
+
+print(ans)
