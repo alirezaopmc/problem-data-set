@@ -77,7 +77,7 @@ def makeOutputs(outString, cnt):
 
 # Manually add some inputs
 if "Case 1":
-    n = 28
+    n = 0
     
     inString = "{}\n".format(
         n
@@ -102,7 +102,7 @@ if "Case 2":
     makeInputs(inString, count)
     makeOutputs(outString, count)
 if "Case 3":
-    n=2**28
+    n=2**32
     inString = "{}\n".format(
         n
     )
