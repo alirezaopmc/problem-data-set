@@ -10,9 +10,9 @@ def arrayToString(arr: list):
             result += "{} ".format(arr[i])
         else:
             result += "{}".format(arr[i])
-    
+
     return result
-    
+
 # Is Prime?
 def isPrime(n):
     if n == 1:
@@ -21,11 +21,11 @@ def isPrime(n):
         return True
     elif n % 2 == 0:
         return False
-    
+
     for i in range(3, int(math.sqrt(n))+1, 2):
         if n % i == 0:
             return False
-    
+
     return True
 
 rnd = lambda minimum=0, maximum=10**9: random.randint(minimum, maximum)
@@ -46,9 +46,11 @@ def generate():
         while (t-x) in d:
             x = rnd(-10**9, +10**9)
 
-        a[i] = x 
+        d[x] = True
 
-    # Making only one solution    
+        a[i] = x
+
+    # Making only one solution
     i = rnd(0, n-2)
     j = rnd(i+1, n-1)
 
@@ -76,30 +78,30 @@ if "Case 1":
     n = 2
     t = 5
     a = [3, 2]
-    
+
     inString = "{} {}\n{}\n".format(
         n, t,
         arrayToString(a)
     )
 
     outString = "1 2"
-    
+
     count += 1
     makeInputs(inString, count)
     makeOutputs(outString, count)
-    
+
 if "Case 2":
     n = 5
     t =-7
     a = [-5, 11, -4, 3, 0]
-    
+
     inString = "{} {}\n{}\n".format(
         n, t,
         arrayToString(a)
     )
 
     outString = "2 3"
-    
+
     count += 1
     makeInputs(inString, count)
     makeOutputs(outString, count)
